@@ -1,0 +1,100 @@
+* {
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Myriad Pro', sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1360px;
+    width: 100%;
+}
+
+.wrapper-header {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu-header-icons {
+    display: flex;
+    font-size: 11px;
+    height: 65px;
+    align-items: center;
+}
+
+.header-menu {
+    display: flex;
+}
+
+.item-menu {
+    margin-right: 35px;
+}
+
+.item-menu .link {
+    color: #070707;
+    text-transform: uppercase;
+}
+
+.header-icons {
+    display: flex;
+}
+
+.container-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 40px;
+    border: 1px solid #c6c6c6;
+}
+
+.container-ic img {
+    height: 15px;
+    width: 15px;
+    
+}
+
+.content {
+    display: flex;
+}
+
+.main-content {
+    width: calc(100% - 40px);
+}
+
+.slider {
+    height: 460px;
+    width: 100%;
+    background: #a7b3b3;
+}
+
+.chat-block {
+    width: 16px;
+}
