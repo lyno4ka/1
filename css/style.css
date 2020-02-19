@@ -108,11 +108,45 @@ h1, h2, h3, h4, p, ul {
     justify-content: space-between;
 }
 
+.slider-navigation {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a7b3b3;
+}
+
+.slider-nav--left {
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: #a7b3b3;
+    text-align: center;
+}
+
+.slider-nav--right {
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: #a7b3b3;
+}
+
+.slider-nav--right img,
+.slider-nav--left img {
+    width: 15px;
+    height: 15px;
+}
+
 .slider-content {
-    width: 65%;
+    width: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-block {
@@ -121,11 +155,6 @@ h1, h2, h3, h4, p, ul {
     flex-direction: column;
     align-items: center;
 }    
-
-.slider-content {
-    width: 100%;
-}
-
 
 .slider-content img {
     max-width: 100px;
@@ -151,20 +180,19 @@ h1, h2, h3, h4, p, ul {
 h1 {
     font-size: 14px;
     color: #ffffff;
-    /* font-weight: bold; */
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .divider-white {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .slider-text {
     font-size: 14px;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .slider-link {
@@ -175,27 +203,45 @@ h1 {
 }
 
 .products-prices-block {
-    width: 100%;
+    position: relative;
+    display: flex;
+    width: 85%;
+    justify-content: flex-start;
 }
 
 .wrapper-avatar {
-    /* width: 237px; */
-    /* height: 237px; */
     border: 2px solid  #ffffff;
+    padding: 3px;
+    transform: rotate(45deg);
 }
 
 .slider-avatar {
+    display: flex;
+    width: 160px;
+    height: 160px;
     border: 2px solid  #ffffff;
 }
 
-.products-prices-block {
-    position: relative;
+.image-avatar {
     display: flex;
-    justify-content: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
 }
 
 .prices-container {
-    /* position: absolute; */
+    position: absolute;
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    top: 40px;
+    left: 180px;
 }
 
 .wrapper-prices {
@@ -205,8 +251,8 @@ h1 {
 }
 
 .prices {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -237,6 +283,3 @@ h1 {
     width: 100%;
     display: block;
 }
-
-
-  
