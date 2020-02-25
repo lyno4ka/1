@@ -1,12 +1,12 @@
-/* @font-face {
-    font-family: 'Myriad Pro Regular';
-    src: url('MyriadPro-Regular.eot');
-    src: url('MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-    url('MyriadPro-Regular.woff') format('woff'),
-    url('MyriadPro-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    } */
+@font-face {
+    font-family: 'PF Din Text Comp Pro';
+    src: url('../assets/fonts/ofont.ru_PF\ Din\ Text\ Comp\ Pro.ttf');
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('../assets/fonts/ofont.ru_PT\ Serif.ttf');    
+}
 
 * {
     border: 1px solid red;
@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Myriad Pro Regular', sans-serif;
+    /* font-family: 'Myriad Pro Regular', sans-serif; */
     background: #ffffff;
     margin: 0;
     padding: 0;
@@ -135,35 +135,29 @@ h1, h2, h3, h4, p, ul {
 }
 
 .slider-content {
-    width: 65%;
+    width: 95%;
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .title-block {
     display: flex;
-    width: 100%;
-    flex-direction: column;
+    width: 74%;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }    
 
-.slider-content img {
-    max-width: 100px;
-}
-
 .slider-image {
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    position: relative;
+    width: 33%;
+    position: absolute;
+    right: 0;
 }
 
 .slider-image img {
     position: absolute;
-    height: 505px;
     top: -23px;
 }
 
@@ -171,8 +165,9 @@ h1, h2, h3, h4, p, ul {
     width: 16px;
 }
 
-h1 {
+.title-block h1 {
     font-size: 14px;
+    width: 100%;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
@@ -181,12 +176,16 @@ h1 {
 
 .divider-white {
     margin-bottom: 10px;
+    width: 100%;
+    max-width: 100px;
 }
 
 .slider-text {
     font-size: 14px;
     color: #ffffff;
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .slider-link {
@@ -194,17 +193,19 @@ h1 {
     color: #373d3d;
     text-transform: uppercase;
     text-decoration: underline;
+    width: 100%;
+    text-align: center;
 }
 
 .products-prices-block {
     position: relative;
     display: flex;
-    width: 85%;
-    justify-content: flex-start;
+    width: 90%;
+    left: 49px;
 }
 
 .wrapper-avatar {
-    border: 2px solid  #ffffff;
+    border: 2px solid #ffffff;
     padding: 3px;
     transform: rotate(45deg);
 }
@@ -214,7 +215,7 @@ h1 {
     justify-content: center;
     width: 160px;
     height: 160px;
-    border: 2px solid  #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .avatar {
@@ -245,18 +246,20 @@ h1 {
 }
 
 .prices-container {
-    position: absolute;
+    position: relative;
     display: flex;
-    width: 75%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: baseline;
     top: 40px;
-    left: 180px;
+    height: fit-content;
 }
 
 .wrapper-prices {
     transform: rotate(45deg);
-    border: 2px solid  #ffffff;
+    border: 2px solid #ffffff;
     padding: 2px;
+    margin: 0px 50px 0 0;
+    height: fit-content;
 }
 
 .prices {
@@ -297,32 +300,37 @@ h1 {
     justify-content: space-around;
     align-items: center;
     width: 10%;
+    height: 20px;
     position: absolute;
-    top: 440px;
-    left: 600px;
+    bottom: 10px;
+    left: 50%;
 }
 
-.selector {
-    width: 5px;
-    height: 5px;
+/* .pagination-list {
+    display: flex;
+}
+
+.square {
+    font-size: 20px;
+    color: #686868;
     transform: rotate(45deg);
-    background: #676767;
 }
 
 .selector:hover {
     width: 10px;
     height: 10px;
+   
     border: 1px solid #676767;
-}
+} */
 
 .wrapper-content {
     display: flex;
     width: calc(100% - 40px);
+    height: 430px;
 }
 
 .wrapper-trip {
     width: 40%;
-    height: 420px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,7 +351,7 @@ h1 {
     justify-content: center;
     align-items: center;
     transform: rotate(-45deg);
-    /* background: url(./assets/image/boxes.png) no-repeat center; */
+    background: url(../assets/image/boxes.png) no-repeat center;
 }
 
 .container-trip h2 {
@@ -367,6 +375,6 @@ h1 {
 }
 
 .container-article {
-    height: 420px; 
     width: 60%;
+    display: flex;
 }
