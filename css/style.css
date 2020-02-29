@@ -48,8 +48,8 @@ h1, h2, h3, h4, p, ul {
 
 .logo {
     position: absolute;
-    left: 0;
     top: 0;
+    left: -40px;
 }
 
 .menu-header-icons {
@@ -154,12 +154,12 @@ h1, h2, h3, h4, p, ul {
 .slider-image {
     width: 33%;
     position: absolute;
-    right: 0;
+    top: 45px;
+    right: 80px;
 }
 
 .slider-image img {
-    position: absolute;
-    top: -23px;
+
 }
 
 .chat-block {
@@ -316,17 +316,47 @@ h1, h2, h3, h4, p, ul {
     left: 50%;
 }
 
-/* .pagination-list {
+.pagination-list {
     display: flex;
+    align-items: center;
 }
 
-.square {
-    font-size: 20px;
-    color: #686868;
+.pagination-item {
+    width: 15px;
+    display: flex;
+    align-items: center;
+    height: 15px;
+    justify-content: center;
+    padding: 9px;
+}
+
+.pagination-item:hover {
+    border: 1px solid #676767;
     transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 8px;
 }
 
-.selector:hover {
+/* .current-item {
+    border: 1px solid #676767;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.circle {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+    color: #686868;
+}
+
+/* .selector:hover {
     width: 10px;
     height: 10px;
    
@@ -336,6 +366,8 @@ h1, h2, h3, h4, p, ul {
 .wrapper-content {
     display: flex;
     width: calc(100% - 40px);
+    position: relative;
+    z-index: 1;
 }
 
 .wrapper-trip {
@@ -413,7 +445,7 @@ h1, h2, h3, h4, p, ul {
 }
 
 .container-stylist {
-  
+    width: 52%;
 }
 
 .container-stylist img {
@@ -450,10 +482,12 @@ h1, h2, h3, h4, p, ul {
 }
 
 .name-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+    writing-mode: tb-rl;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-wrap: nowrap; */
+    /* text-transform: uppercase; */
 }
 
 .name-stylist {
@@ -461,7 +495,8 @@ h1, h2, h3, h4, p, ul {
     font-size: 24px;
     color: #4d4d4d;
     text-transform: uppercase;
-    transform: rotate(90deg);
+    letter-spacing: 1px;
+    /* transform: rotate(90deg); */
 }
 
 .info-block {
