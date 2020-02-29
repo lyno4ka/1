@@ -356,13 +356,6 @@ h1, h2, h3, h4, p, ul {
     color: #686868;
 }
 
-/* .selector:hover {
-    width: 10px;
-    height: 10px;
-   
-    border: 1px solid #676767;
-} */
-
 .wrapper-content {
     display: flex;
     width: calc(100% - 40px);
@@ -446,6 +439,7 @@ h1, h2, h3, h4, p, ul {
 
 .container-stylist {
     width: 52%;
+    margin-right: 20px;
 }
 
 .container-stylist img {
@@ -479,15 +473,14 @@ h1, h2, h3, h4, p, ul {
 
 .about-stylist {
     display: flex;
+    justify-content: space-between;
 }
 
 .name-block {
     writing-mode: tb-rl;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-wrap: nowrap; */
-    /* text-transform: uppercase; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .name-stylist {
@@ -495,13 +488,14 @@ h1, h2, h3, h4, p, ul {
     font-size: 24px;
     color: #4d4d4d;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    /* transform: rotate(90deg); */
+    letter-spacing: 2px;
+    font-weight: normal;
 }
 
 .info-block {
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
 }
 
 .rating-block {
@@ -538,4 +532,80 @@ h1, h2, h3, h4, p, ul {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
+}
+
+.wrapper-player{
+    width: 60%;
+}
+
+.wrapper-calculator-and-looks {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper-calculator {
+    width: 100%;
+    background: url(../assets/image/background-calc.png) repeat center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-calculator {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'PT Serif';
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.wrapper-looks {
+    width: 100%;
+    display: flex;
+}
+
+.wrapper-latest-looks {
+    width: 50%;
+    background-color: #e6e2e1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper-best-looks {
+    width: 50%;
+    background-color: #d7d5d6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-looks-block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-looks {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'PT Serif';
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.latest-looks {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-looks {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
