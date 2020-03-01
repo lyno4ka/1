@@ -27,10 +27,10 @@
                 </div>                                 
                 <div class="header-icons">
                     <div class="container-ic">
-                        <img src="./assets/image/ic_search.png" alt="search">
+                        <img src="./assets/icons/ic_search.png" alt="search">
                     </div>
                     <div class="container-ic">
-                        <img src="./assets/image/ic_menu.png" alt="menu">
+                        <img src="./assets/icons/ic_menu.png" alt="menu">
                     </div>                  
                 </div>
             </div>
@@ -132,7 +132,7 @@
             </div>
             <div class="chat-block">
                 <div class="container-ic">
-                    <img src="./assets/image/ic_chat.png" alt="chat">
+                    <img src="./assets/icons/ic_chat.png" alt="chat">
                 </div>
             </div>
         </div>
@@ -149,7 +149,7 @@
             </div>
             <div class="container-article">
                 <div class="article-navigation">
-                    <button type="article-button" class="article-nav--left">
+                    <button type="button" class="article-nav--left">
                         <img src="./assets/image/arrow_l-st.png" alt="arrow-left">
                     </button>
                 </div>
@@ -188,7 +188,7 @@
                     </div>
                 </div>
                 <div class="article-navigation">
-                    <button type="article-button" class="article-nav--right">
+                    <button type="button" class="article-nav--right">
                         <img src="./assets/image/arrow_r-st.png" alt="arrow-right">
                     </button>
                 </div>
@@ -196,12 +196,26 @@
         </div>
         <div class="wrapper-content">
             <div class="wrapper-player">
-                
+                <!-- video-player -->
             </div>
             <div class="wrapper-calculator-and-looks">
                 <div class="wrapper-calculator">
-                    <h2 class="title-calculator">Refund calculator</h2>
-                    <img src="./assets/image/divider-calc.png" alt="divider-calc">
+                    <div class="calculator">
+                        <h2 class="title-calculator">Refund calculator</h2>
+                        <img class="divider-calculator" src="./assets/image/divider-calc.png" alt="divider-calc">
+                        <form action="">
+                        <select class="calc-select" name="country" id="country" required>
+                            <option selected="selected">Select country</option>
+                            <option value="France">France</option>
+                            <option value="England">England</option>
+                            <option value="Germany">Germany</option>
+                            <option value="USA">USA</option>
+                            <option value="Russia">Russia</option>
+                        </select>
+                        <input class="calc-input" type="text" value="Type purchase">
+                        <button class="calc-button" type="submit">Start new trip</button>
+                    </form>
+                    </div>
                 </div>
                 <div class="wrapper-looks">
                     <div class="wrapper-latest-looks">
@@ -211,15 +225,15 @@
                         </div>   
                         <div class="latest-looks">
                             <div class="looks-navigation">
-                                <button type="looks-button" class="looks-nav--left">
+                                <button type="button" class="looks-nav--left latest-nav">
                                     <img src="./assets/image/arrow_l-st.png" alt="arrow-left">
                                 </button>
                             </div>
                             <div class="looks-image">
-                                <img src="./assets/image/" alt="latest-looks">
+                                <img src="./assets/image/latest-looks-man-1.png" alt="latest-looks">
                             </div>
                             <div class="looks-navigation">
-                                <button type="looks-button" class="looks-nav--right">
+                                <button type="button" class="looks-nav--right latest-nav">
                                     <img src="./assets/image/arrow_r-st.png" alt="arrow-right">
                                 </button>
                             </div>
@@ -232,15 +246,15 @@
                         </div>
                         <div class="best-looks">
                             <div class="looks-navigation">
-                                <button type="looks-button" class="looks-nav--left">
+                                <button type="button" class="looks-nav--left best-nav">
                                     <img src="./assets/image/arrow_l-st.png" alt="arrow-left">
                                 </button>
                             </div>
                             <div class="looks-image">
-                                <img src="./assets/image/" alt="best-looks">
+                                <img src="./assets/image/best-rated-looks-coat-1.png" alt="best-looks">
                             </div>
                             <div class="looks-navigation">
-                                <button type="looks-button" class="looks-nav--right">
+                                <button type="button" class="looks-nav--right best-nav">
                                     <img src="./assets/image/arrow_r-st.png" alt="arrow-right">
                                 </button>
                             </div>
