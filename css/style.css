@@ -534,9 +534,15 @@ h1, h2, h3, h4, p, ul {
     text-decoration: underline;
 }
 
-.wrapper-player{
+.wrapper-video-player{
     width: 60%;
 }
+
+video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
 
 .wrapper-calculator-and-looks {
     width: 40%;
@@ -564,6 +570,7 @@ h1, h2, h3, h4, p, ul {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+    margin-top: 25px;
     font-family: 'PT Serif';
     font-size: 14px;
     font-weight: bold;
@@ -581,7 +588,8 @@ h1, h2, h3, h4, p, ul {
     font-size: 14px;
     color: #474646;
     background: transparent;
-    padding: 7px 0 7px 10px;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #8a8a8a;
 }
 
 .calc-input {
@@ -591,21 +599,21 @@ h1, h2, h3, h4, p, ul {
     font-size: 14px;
     color: #474646;
     background: transparent;
-    padding: 7px 0 7px 10px;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #8a8a8a;
 }
 
 .calc-button {
     width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
+    margin-bottom: 25px;
+    padding: 5px;
     font-size: 14px;
     font-family: "PT Serif";
     color: #ffffff;
-    font-weight: bold;
     text-transform: uppercase;
-    text-align: center;
     background: #a7b3b3;
     cursor: pointer;
+    border: none;
 }
   
 .wrapper-looks {
@@ -656,6 +664,7 @@ h1, h2, h3, h4, p, ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .title-looks {
@@ -670,12 +679,27 @@ h1, h2, h3, h4, p, ul {
 
 .latest-looks {
     width: 100%;
+    height: 210px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .best-looks {
     width: 100%;
+    height: 210px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+}
+
+
+.looks-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.looks-image img {
+    object-fit: cover;
 }
