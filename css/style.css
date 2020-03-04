@@ -536,13 +536,40 @@ h1, h2, h3, h4, p, ul {
 
 .wrapper-video-player{
     width: 60%;
+    position: relative;
+}
+
+
+.video-title-block {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 video {
     width: 100%;
     height: auto;
     max-height: 100%;
-  }
+}
+
+.video-title {
+    width: 85%;
+    margin: 20px;
+    padding: 10px 10px 0 10px;
+    font-family: 'PT Serif';
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.video-divider-white {
+    width: 100%;
+    max-width: 140px;
+}
 
 .wrapper-calculator-and-looks {
     width: 40%;
@@ -693,7 +720,6 @@ video {
     justify-content: space-between;
 }
 
-
 .looks-image {
     display: flex;
     justify-content: center;
@@ -702,4 +728,12 @@ video {
 
 .looks-image img {
     object-fit: cover;
+}
+
+.wrapper-catalog {
+    background-color: #e7ecf0;
+}
+
+.wrapper-products {
+    width: 25%;
 }
