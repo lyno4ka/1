@@ -537,10 +537,13 @@ h1, h2, h3, h4, p, ul {
 .wrapper-video-player{
     width: 60%;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 
 .video-title-block {
+    width: 90%;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -600,6 +603,7 @@ video {
     margin-top: 25px;
     font-family: 'PT Serif';
     font-size: 14px;
+    color: #282828;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -700,6 +704,7 @@ video {
     text-align: center;
     font-family: 'PT Serif';
     font-size: 14px;
+    color: #282828;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -731,9 +736,142 @@ video {
 }
 
 .wrapper-catalog {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     background-color: #e7ecf0;
+}
+
+.wrapper-partners {
+    width: 17%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-partners-block {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-partners {
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'PT Serif';
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #282828;
+}
+
+.divider-partners {
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.text-partners {
+    margin-bottom: 25px;
+    font-family: 'PF Din Text Comp Pro';
+    font-size: 14px;
+    color: #282828;
+    text-align: center;
+}
+
+.fields-block {
+    width: 85%;
+}
+
+.featured-partners-btn {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'PF Din Text Comp Pro';
+    color: #ffffff;
+    background: #a7b3b3;
+    cursor: pointer;
+    border: none;
+}
+
+.partner-select {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 10px;
+    font-family: 'PF Din Text Comp Pro';
+    font-size: 14px;
+    color: #474646;
+    background: transparent;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #8a8a8a;
 }
 
 .wrapper-products {
     width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.item-properties-block {
+    width: 10%;
+}
+
+.new {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    background-color: #474747;
+}
+
+.new-text {
+    display: inline-block;
+    font-family: 'PF Din Text Comp Pro';
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+}
+
+
+.color-property {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grey-color {
+    width: 20px;
+    height: 20px;
+    background-color: #838383;
+    transform: rotate(-45deg);
+}
+
+.vinous-color {
+    width: 20px;
+    height: 20px;
+    background-color: #804a43;
+    transform: rotate(-45deg);
+}
+
+.blue-color {
+    width: 20px;
+    height: 20px;
+    background-color: #435c80;
+    transform: rotate(-45deg);
+}
+
+.item {
+    height: 200px;
+    width: 80%;
 }
