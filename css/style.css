@@ -824,26 +824,28 @@ video {
 
 .item-block {
     width: 100%;
-    height: 230px;
+    height: 245px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
-    outline: 1px solid #f3f3f3;
-    outline-offset: -10px;
+    margin: 5px 5px 0 5px;
+    border: 2px solid #f3f3f3;
 }
 
 .item-properties-block {
     width: 17%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .new {
-    width: 30px;
-    height: 30px;
-    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -862,12 +864,11 @@ video {
 
 .color-property {
     height: 35%;
-    width: 40%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    align-self: flex-end;
 }
 
 .grey-color {
@@ -892,14 +893,15 @@ video {
 }
 
 .item {
-    width: 75%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .item-img {
-    width: inherit;
+    max-width: 95%;
+    max-height: 210px;
 }
 
 .products-info-block {
@@ -914,12 +916,12 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 1px solid #f3f3f3;
-    outline-offset: -10px;
+    border: 2px solid #f3f3f3;
+    padding: 15px;
+    margin: 5px;
 }
 
 .text-price {
-    padding: 20px;
     font-family: 'PF Din Text Comp Pro';
     font-size: 14px;
     color: #545454;
@@ -928,25 +930,62 @@ video {
 .products-icon-block {
     width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    outline: 1px solid #f3f3f3;
-    outline-offset: -10px;
+    border: 2px solid #f3f3f3;
+    padding: 15px;
+    margin: 5px 5px 5px 0;
 }
 
 .icon-heart,
-.icon-basket,
-.icon-share {
+.icon-share,
+.icon-shopping {
     width: 20px;
     height: 20px;
-    /* margin-right: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #474747;
     transform: rotate(45deg);
 }
 
-i {
-    transform: rotate(-45deg);
+.icon-block {
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ic-heart,
+.ic-share,
+.ic-shopping {
+    font-size: 12px;
+    transform: rotate(-90deg);
     color: #ffffff;
     text-align: center;
+}
+
+.prod-title-text {
+    font-family: 'PF Din Text Comp Pro';
+    font-size: 14px;
+    color: #545454;
+}
+
+.products-title-block {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #f3f3f3;
+    padding: 15px 0 15px 0;
+    margin: 5px 5px 5px 0;
+}
+
+.wrapper-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-logo-block {
+    background: #d4dde4;
 }
