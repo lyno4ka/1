@@ -5,6 +5,8 @@
     <title>Till Bill</title>
     <script src="https://use.fontawesome.com/617bb77d64.js"></script>
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
@@ -41,7 +43,7 @@
                 <div class="slider">
                     <div class="slider-navigation left">
                         <button type="button" class="slider-nav--left">
-                            <img src="./assets/image/arrow_l.png" alt="arrow-left">
+                            <img src="./assets/image/arrow_l.png" class="arrow-left" alt="arrow-left">
                         </button>
                     </div>
                     <div class="slider-content">
@@ -126,7 +128,7 @@
                     </div>
                     <div class="slider-navigation right">
                         <button type="button" class="slider-nav--right">
-                            <img src="./assets/image/arrow_r.png" alt="arrow-right">
+                            <img src="./assets/image/arrow_r.png" class="arrow-right" alt="arrow-right">
                         </button>
                     </div>
                 </div>
@@ -151,7 +153,7 @@
             <div class="container-article">
                 <div class="article-navigation">
                     <button type="button" class="article-nav--left">
-                        <img src="./assets/image/arrow_l-st.png" alt="arrow-left">
+                        <img src="./assets/image/arrow_l-st.png" class="arrow-left" alt="arrow-left">
                     </button>
                 </div>
                 <div class="container-stylist">
@@ -190,7 +192,7 @@
                 </div>
                 <div class="article-navigation">
                     <button type="button" class="article-nav--right">
-                        <img src="./assets/image/arrow_r-st.png" alt="arrow-right">
+                        <img src="./assets/image/arrow_r-st.png" class="arrow-right alt="arrow-right">
                     </button>
                 </div>
             </div>
@@ -201,13 +203,17 @@
                     <h3 class="video-title">Get the best opportunities from shopping: fashion looks, personal stylist assistance and tax free refund in one!</h3>
                     <img class="video-divider-white" src="./assets/image/divider-white.png" alt="divider-white">
                 </div>
-                <video controls="controls" poster="./assets/image/video-poster.png">
-                    <source src="./assets/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                    <!-- <source src="../lesha-svik-luna_238206.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
-                </video>
-                <!-- <div id="controls">
-                    <span id="playpause" class="paused">Play</span>
-                </div> -->
+                <div id="video">
+                    <video  src="./assets/video/video.mp4"
+                        type='video/mp4'
+                        codecs="avc1.42E01E, mp4a.40.2"
+                        controls="controls"
+                        poster="./assets/image/video-poster.png">
+                    </video>
+                    <div class="controls">
+
+                    </div>
+                </div>
             </div>
             <div class="wrapper-calculator-and-looks">
                 <div class="wrapper-calculator">
@@ -237,7 +243,7 @@
                         <div class="latest-looks">
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--left latest-nav">
-                                    <img src="./assets/image/arrow_l-st.png" alt="arrow-left">
+                                    <img src="./assets/image/arrow_l-st.png" class="arrow-left" alt="arrow-left">
                                 </button>
                             </div>
                             <div class="looks-image">
@@ -245,7 +251,7 @@
                             </div>
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--right latest-nav">
-                                    <img src="./assets/image/arrow_r-st.png" alt="arrow-right">
+                                    <img src="./assets/image/arrow_r-st.png"  class="arrow-right" alt="arrow-right">
                                 </button>
                             </div>
                         </div>
@@ -258,7 +264,7 @@
                         <div class="best-looks">
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--left best-nav">
-                                    <img src="./assets/image/arrow_l-st.png" alt="arrow-left">
+                                    <img src="./assets/image/arrow_l-st.png" class="arrow-left" alt="arrow-left">
                                 </button>
                             </div>
                             <div class="looks-image">
@@ -266,7 +272,7 @@
                             </div>
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--right best-nav">
-                                    <img src="./assets/image/arrow_r-st.png" alt="arrow-right">
+                                    <img src="./assets/image/arrow_r-st.png" class="arrow-right" alt="arrow-right">
                                 </button>
                             </div>
                         </div>
@@ -293,9 +299,26 @@
                             <option value="Prague">Prague</option>
                         </select>
                    </div>
-                    <div class="pagination-block">
-                        <div class="left-pag-block"></div>
-                        <div class="right-pag-block"></div>
+                    <div class="catalog-pagination-block">
+                        <div class="wrapper-arrow">
+                            <img src="./assets/image/arrow_l-st.png"  class="arrow-left" alt="arrow-left">
+                        </div>
+                        <div class="catalog-pagination">
+                            <ul class="catalog-pagination-list">
+                                <li class="catalog-pagination-item">
+                                    <i class="fa fa-minus icon-minus" aria-hidden="true"></i>
+                                </li>
+                                <li class="catalog-pagination-item current-item">
+                                    <i class="fa fa-minus icon-minus" aria-hidden="true"></i>                                
+                                </li>
+                                <li class="catalog-pagination-item">
+                                    <i class="fa fa-minus icon-minus" aria-hidden="true"></i>                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wrapper-arrow">
+                            <img src="./assets/image/arrow_r-st.png" class="arrow-right" alt="arrow-right">
+                        </div>
                     </div>
                 </div>
                 <div class="wrapper-products">
@@ -360,7 +383,9 @@
         <div class="wrapper-content">
             <footer>
                 <div class="footer-logo-block">
-                    <img src="./assets/image/logo-big.png" alt="logo-footer" class="footer-logo">
+                    <a href="" class="link-footer-logo">
+                        <img src="./assets/image/logo-big.png" alt="logo-footer" class="footer-logo">
+                    </a>
                 </div>
                 <div class="wrapper-footer">
                     <div class="footer-ref-block">
