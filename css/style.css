@@ -158,10 +158,6 @@ h1, h2, h3, h4, p, ul {
     right: 80px;
 }
 
-.slider-image img {
-
-}
-
 .chat-block {
     width: 16px;
 }
@@ -738,7 +734,7 @@ video {
 .wrapper-catalog {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #e7ecf0;
 }
 
@@ -981,11 +977,131 @@ video {
     margin: 5px 5px 5px 0;
 }
 
-.wrapper-footer {
+footer {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    background: #d4dde4;
 }
 
 .footer-logo-block {
-    background: #d4dde4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer-logo {
+    margin: 30px;
+}
+
+
+.wrapper-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-ref-block {
+    display: flex;
+    width: 19%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-ref-footer {
+    margin-bottom: 15px;
+}
+
+.ref-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'PF Din Text Comp Pro';
+    font-size: 14px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #474747;
+}
+
+.wrapper-footer-menu {
+    display: flex;
+    width: 35%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.elem-menu {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    font-family: 'PF Din Text Comp Pro';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #94999d;
+}
+
+.wrapper-subscribe {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.title-subscribe {
+    width: 100%;
+    margin: 25px 0 15px 0;
+    font-family: 'PT Serif';
+    font-size: 14px;
+    color: #474747;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+.footer-form {
+    margin-bottom: 10px;
+}
+
+.sub-field {
+    width: 60%;
+    padding: 7px;
+    margin-right: -3px;
+    border: none;
+}
+
+.footer-btn {
+    width: 30%;
+    padding: 6px;
+    font-family: 'PF Din Text Comp Pro';
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #474747;
+    border: none;
+}
+
+.social-block {
+    padding: 10px 0 20px 0;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    margin-right: 10px;
+}
+
+.pinterest,
+.facebook,
+.twitter,
+.instagram {
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    padding: 3px;
+    color: #ffffff;
+    background-color: #474747;
+    text-align: center;
 }
