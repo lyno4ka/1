@@ -22,11 +22,11 @@ body {
 
 li {
     list-style: none;
-    font-family: 'PF Din Text Comp Pro';
 }
 
 a {
     text-decoration: none;
+    font-family: 'PF Din Text Comp Pro';
 }
 
 h1, h2, h3, h4, p, ul {
@@ -96,6 +96,7 @@ h1, h2, h3, h4, p, ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 65px;
     width: 40px;
     border: 1px solid #c6c6c6;
@@ -104,6 +105,14 @@ h1, h2, h3, h4, p, ul {
 .container-ic img {
     height: 15px;
     width: 15px; 
+}
+
+.input-search {
+    position: absolute;
+    left: -154px;
+    font-family: 'PF Din Text Comp Pro';
+    color: #070707;
+    font-size: 12px;
 }
 
 .content {
