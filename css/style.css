@@ -125,6 +125,7 @@ h1, h2, h3, h4, p, ul {
 }
 
 .slider {
+    display: none;
     height: 460px;
     width: 100%;
     background: #a7b3b3;
@@ -175,14 +176,17 @@ h1, h2, h3, h4, p, ul {
 }    
 
 .slider-image {
-    width: 33%;
+    width: 27%;
     position: absolute;
     top: 45px;
-    right: 80px;
+    right: 17%;
+    max-width: 370px;
+    display: flex;
+    justify-content: center;
 }
 
 .chat-block {
-    width: 16px;
+    width: 40px;
 }
 
 .title-block h1 {
@@ -338,7 +342,7 @@ h1, h2, h3, h4, p, ul {
     height: 20px;
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 45%;
 }
 
 .pagination-list {
@@ -365,13 +369,14 @@ h1, h2, h3, h4, p, ul {
     padding: 8px;
 }
 
-/* .current-item {
+.active {
     border: 1px solid #676767;
     transform: rotate(45deg);
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+    padding: 8px;
+}
 
 .circle {
     font-size: 10px;
@@ -1258,3 +1263,20 @@ footer {
     border-radius: 3px;
     cursor: pointer;
 }
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }

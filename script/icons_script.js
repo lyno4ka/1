@@ -1,10 +1,8 @@
-let search = document.getElementById('icon-search');
-search.addEventListener('click', showHideSearchInput);
+const search = document.getElementById('icon-search');
 
 function showHideSearchInput(event) {
     
     const targetElement = event.target;
-    console.log(event);
     
     let inputElement = document.createElement('input');
     inputElement.type = 'search';
@@ -30,5 +28,6 @@ function showHideSearchInput(event) {
                 break;
     }    
     }); 
-
 }
+
+search.addEventListener('click', showHideSearchInput);
