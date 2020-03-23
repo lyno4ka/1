@@ -50,6 +50,7 @@ h1, h2, h3, h4, p, ul {
     position: absolute;
     top: 0;
     left: -40px;
+    z-index: 5;
 }
 
 .menu-header-icons {
@@ -126,6 +127,7 @@ h1, h2, h3, h4, p, ul {
 
 .slider {
     display: none;
+    position: relative;
     height: 460px;
     width: 100%;
     background: #a7b3b3;
@@ -159,6 +161,15 @@ h1, h2, h3, h4, p, ul {
 }
 
 .slider-content {
+    height: 100%;
+    width: 95%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.slider-wrapper {
     width: 95%;
     position: relative;
     display: flex;
@@ -178,8 +189,8 @@ h1, h2, h3, h4, p, ul {
 .slider-image {
     width: 27%;
     position: absolute;
-    top: 45px;
-    right: 17%;
+    /* top: 45px; */
+    right: 0;
     max-width: 370px;
     display: flex;
     justify-content: center;
@@ -359,7 +370,7 @@ h1, h2, h3, h4, p, ul {
     padding: 9px;
 }
 
-.pagination-item:hover {
+/* .pagination-item:hover {
     border: 1px solid #676767;
     transform: rotate(45deg);
     display: flex;
@@ -367,7 +378,7 @@ h1, h2, h3, h4, p, ul {
     justify-content: center;
     cursor: pointer;
     padding: 8px;
-}
+} */
 
 .active {
     border: 1px solid #676767;
