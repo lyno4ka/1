@@ -55,18 +55,18 @@
                     </div>
                     <div class="pagination">
                         <ul class="pagination-list">
-                            <li class="pagination-item" onclick="currentSlide(1)">
+                            <!-- <li class="pagination-item">
                                 <i class="fa fas fa-circle circle"></i>
                             </li>
-                            <li class="pagination-item" onclick="currentSlide(2)">
+                            <li class="pagination-item">
                                 <i class="fa fas fa-circle circle"></i>                                
                             </li>
-                            <li class="pagination-item" onclick="currentSlide(3)">
+                            <li class="pagination-item">
                                 <i class="fa fas fa-circle circle"></i>                                
                             </li>
-                            <li class="pagination-item" onclick="currentSlide(4)">
+                            <li class="pagination-item">
                                 <i class="fa fas fa-circle circle"></i>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -94,39 +94,7 @@
                         <img src="./assets/image/arrow_l-st.png" id="article-arrow-left" class="arrow-left" alt="arrow-left">
                     </button>
                 </div>
-                <div class="container-stylist">
-                    <img src="./assets/image/stylistLindsayPearce.png" alt="LindsayPearce">
-                </div>
-                <div class="container-information">
-                    <div class="stylist-info">
-                        <div class="title-info">
-                            <h2>Recommended stylists</h2>
-                        <img class="divider-stilist" src="./assets/image/divider-st.png" alt="divider-stilist">
-                        </div>
-                        <div class="about-stylist">
-                            <div class="name-block">
-                                <h3 class="name-stylist">Lindsay Pearce</h3>
-                            </div>
-                            <div class="info-block">
-                                <div class="rating-block">
-                                    <div class="prof">
-                                        <span class="text-prof">Stylist</span>
-                                        <span class="text-prof">Bloger</span>
-                                    </div>
-                                    <div class="rating-stars-stylist">
-                                        <img src="./assets/image/star-st-b.png" alt="star">
-                                        <img src="./assets/image/star-st-w.png" alt="star-o">
-                                    </div>
-                                </div>                                      
-                                <p class="text-info"><span class="highlighted-text">Lorem Ipsum</span> has been the industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled it to make a type 
-                                specimen book. It has survived not only five centuries, but also the leap into 
-                                electronic typesetting, remaining essentially unchanged. It was popularised 
-                                in the 1960s</p>
-                                <a href="#" class="link-contact">Contact with Lindsay</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="article-content">
                 </div>
                 <div class="article-navigation">
                     <button type="button" class="article-nav--right">
@@ -181,15 +149,14 @@
                         <div class="latest-looks">
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--left latest-nav">
-                                    <img src="./assets/image/arrow_l-st.png" class="arrow-left" alt="arrow-left">
+                                    <img src="./assets/image/arrow_l-st.png" id="latest-arrow-left" class="arrow-left" alt="arrow-left">
                                 </button>
                             </div>
-                            <div class="looks-image">
-                                <img src="./assets/image/latest-looks-man-1.png" alt="latest-looks">
+                            <div class="looks-image" id="latest-image">
                             </div>
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--right latest-nav">
-                                    <img src="./assets/image/arrow_r-st.png"  class="arrow-right" alt="arrow-right">
+                                    <img src="./assets/image/arrow_r-st.png" id="latest-arrow-right" class="arrow-right" alt="arrow-right">
                                 </button>
                             </div>
                         </div>
@@ -202,15 +169,14 @@
                         <div class="best-looks">
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--left best-nav">
-                                    <img src="./assets/image/arrow_l-st.png" class="arrow-left" alt="arrow-left">
+                                    <img src="./assets/image/arrow_l-st.png" id="best-arrow-left" class="arrow-left" alt="arrow-left">
                                 </button>
                             </div>
-                            <div class="looks-image">
-                                <img  src="./assets/image/best-rated-looks-coat-1.png" alt="best-looks">
+                            <div class="looks-image" id="best-rated-image">
                             </div>
                             <div class="looks-navigation">
                                 <button type="button" class="looks-nav--right best-nav">
-                                    <img src="./assets/image/arrow_r-st.png" class="arrow-right" alt="arrow-right">
+                                    <img src="./assets/image/arrow_r-st.png" id="best-arrow-right" class="arrow-right" alt="arrow-right">
                                 </button>
                             </div>
                         </div>
@@ -370,6 +336,7 @@
     </div>
     <script src="script/icons_script.js"></script>
     <script src="script/slider_main.js"></script>
-    <!-- <script src="script/slider-stylist.js"></script> -->
+    <script src="script/slider_stylist.js"></script>
+    <script src="script/slider_looks.js"></script>
 </body>
 </html>
