@@ -48,7 +48,7 @@ function createLatestLooksGallerySlide() {
         <div class="looks-image-block">
             <img src="${latesLookstBannerCarousel[indexSlide].imgUrl}" alt="latest-looks">
         </div> 
-`;
+    `;
     latestImage.replaceWith(latestImage);
 }
 createLatestLooksGallerySlide();

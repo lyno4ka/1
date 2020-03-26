@@ -73,7 +73,7 @@
             </div>
             <div class="chat-block">
                 <div class="container-ic">
-                    <img src="./assets/icons/ic_chat.png" alt="chat">
+                    <img src="./assets/icons/ic_chat.png" id="open-modal" alt="chat">
                 </div>
             </div>
         </div>
@@ -333,8 +333,31 @@
                 </div>
             </footer>
         </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Contact form</h2>
+              </div>
+              <div class="modal-body">
+                <p class="form-modal-text">If you have any questions leave your phone number.</p>
+                <form>
+                    <p class="form-modal-text">Your name: <input name="login" required></p>
+                    <p class="form-modal-text">Phone number in format +380xx-xxx-xx-xx:  
+                        <input type="tel" name="tel" pattern="^\+380\d{2}-\d{3}-\d{2}-\d{2}$" 
+                        placeholder="+38000-000-00-00" required></p>
+                    <p class="form-modal-text"><input type="submit" value="Send"></p>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <h3>We will contact you!</h3>
+              </div>
+            </div>
+        </div>
     </div>
     <script src="script/icons_script.js"></script>
+    <script src="script/modal.js"></script>
     <script src="script/slider_main.js"></script>
     <script src="script/slider_stylist.js"></script>
     <script src="script/slider_looks.js"></script>
