@@ -101,6 +101,7 @@ const sliderArrowRight = document.getElementById('slider-arrow-right');
 let li = paginationList.children;
 
 let indexSlide = 0;
+let index = 0;
 
 
 function createMainBannerGallerySlide() {
@@ -178,7 +179,6 @@ createMainBannerGallerySlide();
 function createMainBannerGalleryPagination() {
     for (var i = 0; i < mainBannerCarousel.length; i++) {
         let li = document.createElement('li');
-        // li.setAttribute('onclick', 'click()');
         li.classList.add('pagination-item');
         let i = document.createElement('i');
         i.classList.add('fa', 'fas', 'fa-circle', 'circle');
@@ -197,30 +197,36 @@ function addClassToPagination() {
 addClassToPagination();
 
 sliderArrowLeft.addEventListener('click', function() {
-    indexSlide > 0 ? indexSlide-- : indexSlide = mainBannerCarousel.length - 1;
+    li[indexSlide].classList.remove('current-selector');
+    indexSlide > 0 ? indexSlide -- : indexSlide = mainBannerCarousel.length - 1;
     createMainBannerGallerySlide();
-    li[indexSlide+1].classList.remove('current-selector');
     addClassToPagination();
 });
 
 sliderArrowRight.addEventListener('click', function() {
+    li[indexSlide].classList.remove('current-selector');
     indexSlide < mainBannerCarousel.length - 1 ? indexSlide++ : indexSlide = 0;
     createMainBannerGallerySlide();
     addClassToPagination();
-    li[indexSlide-1].classList.remove('current-selector');
-    // addClassToPagination();
-    console.log(indexSlide);
 });
 
-// paginationList.addEventListener('click', function(event) {
+// li.addEventListener('click', function(event) {
 //     if (event.target.tagName === 'LI') {
 //         event.target.classList.toggle('current-selector');
+//         console.log('aaaa');
 //     }
+   
 // });
 
-// function click() {
-//     li[indexSlide].classList.remove('current-selector');
-//     indexSlide = this;
-//     addClassToSelector();
-//     createMainBannerGallerySlide();
-// };
+paginationList.addEventListener('click', function(event) {
+
+    li[indexSlide].classList.remove('current-selector');
+    console.log(this.children)
+    var nodes = Array.prototype.slice.call( document.querySelector('.pagination-list').children );
+    // const index = [...this.children].indexOf()
+    nodes.indexOf(this)
+
+    
+    console.log('nodes', nodes)
+    console.log('inde', index)
+});

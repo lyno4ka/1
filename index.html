@@ -55,18 +55,6 @@
                     </div>
                     <div class="pagination">
                         <ul class="pagination-list">
-                            <!-- <li class="pagination-item">
-                                <i class="fa fas fa-circle circle"></i>
-                            </li>
-                            <li class="pagination-item">
-                                <i class="fa fas fa-circle circle"></i>                                
-                            </li>
-                            <li class="pagination-item">
-                                <i class="fa fas fa-circle circle"></i>                                
-                            </li>
-                            <li class="pagination-item">
-                                <i class="fa fas fa-circle circle"></i>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -343,11 +331,14 @@
               <div class="modal-body">
                 <p class="form-modal-text">If you have any questions leave your phone number.</p>
                 <form>
-                    <p class="form-modal-text">Your name: <input name="login" required></p>
-                    <p class="form-modal-text">Phone number in format +380xx-xxx-xx-xx:  
-                        <input type="tel" name="tel" pattern="^\+380\d{2}-\d{3}-\d{2}-\d{2}$" 
-                        placeholder="+38000-000-00-00" required></p>
-                    <p class="form-modal-text"><input type="submit" value="Send"></p>
+                    <p class="form-modal-text">Your name: </p>
+                    <input class="form-modal-input" name="login" required>
+                    <p class="form-modal-text">Phone number in format +380xx-xxx-xx-xx:</p>
+                    <input class="form-modal-input" type="tel" name="tel" pattern="^\+380\d{2}-\d{3}-\d{2}-\d{2}$" 
+                    placeholder="+38000-000-00-00" required>
+                    <p class="form-modal-text">
+                        <input class="form-modal-input" type="submit" value="Send">
+                    </p>
                 </form>
               </div>
               <div class="modal-footer">
