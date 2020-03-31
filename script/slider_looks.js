@@ -42,11 +42,13 @@ const latestArrowRight = document.getElementById('latest-arrow-right');
 const bestArrowLeft = document.getElementById('best-arrow-left');
 const bestArrowRight = document.getElementById('best-arrow-right');
 
+let indexLooks = 0;
+
 
 function createLatestLooksGallerySlide() {
     latestImage.innerHTML = `
         <div class="looks-image-block">
-            <img src="${latesLookstBannerCarousel[indexSlide].imgUrl}" alt="latest-looks">
+            <img src="${latesLookstBannerCarousel[indexLooks].imgUrl}" alt="latest-looks">
         </div> 
     `;
     latestImage.replaceWith(latestImage);
@@ -56,7 +58,7 @@ createLatestLooksGallerySlide();
 function createBestLooksGallerySlide() {
     bestRatedImage.innerHTML = `
         <div class="looks-image-block">
-            <img  src="${bestRatedLookstBannerCarousel[indexSlide].imgUrl}" alt="best-looks">
+            <img  src="${bestRatedLookstBannerCarousel[indexLooks].imgUrl}" alt="best-looks">
         </div>
     `;
     bestRatedImage.replaceWith(bestRatedImage);
@@ -65,21 +67,21 @@ createBestLooksGallerySlide();
 
 
 latestArrowLeft.addEventListener('click', function() {
-    indexSlide > 0 ? indexSlide-- : indexSlide = latesLookstBannerCarousel.length - 1;
+    indexLooks > 0 ? indexLooks-- : indexLooks = latesLookstBannerCarousel.length - 1;
     createLatestLooksGallerySlide();    
 });
 
 latestArrowRight.addEventListener('click', function() {
-    indexSlide < latesLookstBannerCarousel.length - 1 ? indexSlide++ : indexSlide = 0;
+    indexLooks < latesLookstBannerCarousel.length - 1 ? indexLooks++ : indexLooks = 0;
     createLatestLooksGallerySlide();
 });
 
 bestArrowLeft.addEventListener('click', function() {
-    indexSlide > 0 ? indexSlide-- : indexSlide = bestRatedLookstBannerCarousel.length - 1;
+    indexLooks > 0 ? indexLooks-- : indexLooks = bestRatedLookstBannerCarousel.length - 1;
     createBestLooksGallerySlide();
 });
 
 bestArrowRight.addEventListener('click', function() {
-    indexSlide < bestRatedLookstBannerCarousel.length - 1 ? indexSlide++ : indexSlide = 0;
+    indexLooks < bestRatedLookstBannerCarousel.length - 1 ? indexLooks++ : indexLooks = 0;
     createBestLooksGallerySlide();
 });

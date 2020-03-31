@@ -99,7 +99,7 @@ let paginationList = document.querySelector('.pagination-list');
 const sliderArrowLeft = document.getElementById('slider-arrow-left');
 const sliderArrowRight = document.getElementById('slider-arrow-right');
 
-let indexSlide = 0;
+let indexMain = 0;
 
 
 function createMainBannerGallerySlide() {
@@ -115,9 +115,9 @@ function createMainBannerGallerySlide() {
                 <div class="wrapper-avatar">
                     <div class="slider-avatar">
                         <div class="avatar">
-                            <img class="image-avatar" src="${mainBannerCarousel[indexSlide].avatarUrl}" alt="avatar">
+                            <img class="image-avatar" src="${mainBannerCarousel[indexMain].avatarUrl}" alt="avatar">
                             <span class="line-avatar"></span>
-                            <span class="text-avatar">Made by ${mainBannerCarousel[indexSlide].stylistName}</span>
+                            <span class="text-avatar">Made by ${mainBannerCarousel[indexMain].stylistName}</span>
                             <div class="rating-stars">
                                 <img src="./assets/image/star-w.png" alt="star">
                                 <img src="./assets/image/star-t1.png" alt="star-o">
@@ -129,43 +129,43 @@ function createMainBannerGallerySlide() {
                     <div class="wrapper-prices">
                         <div class="prices">
                             <div class="cost-block">
-                                <span class="cost">${mainBannerCarousel[indexSlide].products[0].cost}</span>
+                                <span class="cost">${mainBannerCarousel[indexMain].products[0].cost}</span>
                                 <span class="line"></span>
-                                <span class="product">${mainBannerCarousel[indexSlide].products[0].product}</span>
+                                <span class="product">${mainBannerCarousel[indexMain].products[0].product}</span>
                             </div>
                         </div>
                     </div>
                     <div class="wrapper-prices">
                         <div class="prices">
                             <div class="cost-block">
-                                <span class="cost">${mainBannerCarousel[indexSlide].products[1].cost}</span>
+                                <span class="cost">${mainBannerCarousel[indexMain].products[1].cost}</span>
                                 <span class="line"></span>
-                                <span class="product">${mainBannerCarousel[indexSlide].products[1].product}</span>
+                                <span class="product">${mainBannerCarousel[indexMain].products[1].product}</span>
                             </div>
                         </div>
                     </div>
                     <div class="wrapper-prices">
                         <div class="prices">
                             <div class="cost-block">
-                                <span class="cost">${mainBannerCarousel[indexSlide].products[2].cost}</span>
+                                <span class="cost">${mainBannerCarousel[indexMain].products[2].cost}</span>
                                 <span class="line"></span>
-                                <span class="product">${mainBannerCarousel[indexSlide].products[2].product}</span>
+                                <span class="product">${mainBannerCarousel[indexMain].products[2].product}</span>
                             </div>
                         </div>
                     </div>
                     <div class="wrapper-prices">
                         <div class="prices">
                             <div class="cost-block">
-                                <span class="cost">${mainBannerCarousel[indexSlide].products[3].cost}</span>
+                                <span class="cost">${mainBannerCarousel[indexMain].products[3].cost}</span>
                                 <span class="line"></span>
-                                <span class="product">${mainBannerCarousel[indexSlide].products[3].product}</span>
+                                <span class="product">${mainBannerCarousel[indexMain].products[3].product}</span>
                             </div>
                         </div>
                     </div>                                 
                 </div>        
             </div>
             <div class="slider-image fade">
-                <img src="${mainBannerCarousel[indexSlide].mainImgUrl}" alt="man">
+                <img src="${mainBannerCarousel[indexMain].mainImgUrl}" alt="man">
             </div>
         </div>
     `;
@@ -175,91 +175,48 @@ function createMainBannerGallerySlide() {
 createMainBannerGallerySlide();
 
 function createMainBannerGalleryPagination() {
-    for (let i = 0; i < mainBannerCarousel.length; i++) {
+    for (var i = 0; i < mainBannerCarousel.length; i++) {
         let li = document.createElement('li');
         li.classList.add('pagination-item');
-        let i = document.createElement('i');
-        i.classList.add('fa', 'fas', 'fa-circle', 'circle');
+        li.setAttribute('onclick', 'changeSlide(event)');
+        li.id = i;
+        let iTag = document.createElement('i');
+        iTag.classList.add('fa', 'fas', 'fa-circle', 'circle');
 
         paginationList.appendChild(li);
-        li.appendChild(i);
+        li.appendChild(iTag); 
     }
 };
 createMainBannerGalleryPagination();
 
 function addClassToPagination() {
     for (let i = 0; i <  paginationList.children.length; i++) {
-        paginationList.children[indexSlide].classList.add('current-selector');  
+        paginationList.children[indexMain].classList.add('current-selector');  
     }
 };
 addClassToPagination();
 
+function changeSlide(event) {
+    if(event.target.tagName === 'I') {
+        console.log(event)
+        event.currentTarget.parentElement.offsetParent.children[0].children[indexMain].classList.remove('current-selector');
+        indexMain = event.target.parentElement.id;
+        createMainBannerGallerySlide();
+        addClassToPagination();
+    } 
+}
+
+
 sliderArrowLeft.addEventListener('click', function() {
-    paginationList.children[indexSlide].classList.remove('current-selector');
-    indexSlide > 0 ? indexSlide -- : indexSlide = mainBannerCarousel.length - 1;
+    paginationList.children[indexMain].classList.remove('current-selector');
+    indexMain > 0 ? indexMain -- : indexMain = mainBannerCarousel.length - 1;
     createMainBannerGallerySlide();
     addClassToPagination();
 });
 
 sliderArrowRight.addEventListener('click', function() {
-    paginationList.children[indexSlide].classList.remove('current-selector');
-    indexSlide < mainBannerCarousel.length - 1 ? indexSlide++ : indexSlide = 0;
+    paginationList.children[indexMain].classList.remove('current-selector');
+    indexMain < mainBannerCarousel.length - 1 ? indexMain++ : indexMain = 0;
     createMainBannerGallerySlide();
     addClassToPagination();
 });
-
-// li.addEventListener('click', function(event) {
-//     if (event.target.tagName === 'LI') {
-//         event.target.classList.toggle('current-selector');
-//         console.log('aaaa');
-//     }
-   
-// });
-
-paginationList.addEventListener('click', function(event) {
-    event.preventDefault();
-    // console.log(this.children)
-    let nodes = paginationList.children;
-    nodes[indexSlide].classList.remove('current-selector');
-    console.log(nodes);
-    
-    // nodes.forEach(function (item, i) {
-        
-    //     console.log('item[i]', item[i]);
-    //     let index = [...item].indexOf(item[i]);
-    //     indexSlide = index;
-    //     console.log('iindexSlide', indexSlide);
-    //     return item[i];
-    // });
-
-    for(let i = 0; i < nodes.length; i++) {
-        
-        // console.log("this[i]", this.children[i]);   
-        // console.log('nodes', nodes[i]);
-        let index = [...this.children].indexOf(this.children[i]);
-        indexSlide = index;
-        console.log('iindexSlide', indexSlide);
-       
-        
-    }
-   
-    createMainBannerGallerySlide();
-    addClassToPagination();        
-});
-
-
-// for(let i = 0; i < paginationList.length; i++) {
-
-//     paginationList.addEventListener('click', function() {
-
-//         paginationList[indexSlide].classList.remove('current-selector');
-
-//         let index = [...paginationList.children].indexOf(paginationList.children[i]);
-//         indexSlide = index;
-//         console.log('iindexSlide', indexSlide);
-
-//         addClassToPagination();
-//         createMainBannerGallerySlide();
-//     });
-        
-// }

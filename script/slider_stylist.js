@@ -29,12 +29,14 @@ let articleContent = document.querySelector('.article-content');
 const articleArrowRight = document.getElementById('article-arrow-right');
 const articleArrowLeft = document.getElementById('article-arrow-left');
 
+let indexStylist = 0;
+
 
 function createStylistGallerySlide() {
     articleContent.innerHTML = `
         <div class="article-content-block">
             <div class="container-stylist">
-                <img src="${stylistBannerCarousel[indexSlide].imgUrl}" alt="${stylistBannerCarousel[indexSlide].altText}">
+                <img src="${stylistBannerCarousel[indexStylist].imgUrl}" alt="${stylistBannerCarousel[indexStylist].altText}">
             </div>
             <div class="container-information">
                 <div class="stylist-info">
@@ -44,7 +46,7 @@ function createStylistGallerySlide() {
                     </div>
                     <div class="about-stylist">
                         <div class="name-block">
-                            <h3 class="name-stylist">${stylistBannerCarousel[indexSlide].nameStylist}</h3>
+                            <h3 class="name-stylist">${stylistBannerCarousel[indexStylist].nameStylist}</h3>
                         </div>
                         <div class="info-block">
                             <div class="rating-block">
@@ -62,7 +64,7 @@ function createStylistGallerySlide() {
                             specimen book. It has survived not only five centuries, but also the leap into 
                             electronic typesetting, remaining essentially unchanged. It was popularised 
                             in the 1960s</p>
-                            <a href="#" class="link-contact">Contact with ${stylistBannerCarousel[indexSlide].linkContact}</a>
+                            <a href="#" class="link-contact">Contact with ${stylistBannerCarousel[indexStylist].linkContact}</a>
                         </div>
                     </div>
                 </div>
@@ -75,11 +77,11 @@ createStylistGallerySlide();
 
 
 articleArrowLeft.addEventListener('click', function() {
-    indexSlide > 0 ? indexSlide-- : indexSlide = stylistBannerCarousel.length - 1;
+    indexStylist > 0 ? indexStylist-- : indexStylist = stylistBannerCarousel.length - 1;
     createStylistGallerySlide();
 });
 
 articleArrowRight.addEventListener('click', function() {
-    indexSlide < stylistBannerCarousel.length - 1 ? indexSlide++ : indexSlide = 0;
+    indexStylist < stylistBannerCarousel.length - 1 ? indexStylist++ : indexStylist = 0;
     createStylistGallerySlide();
 });

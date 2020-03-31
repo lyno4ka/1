@@ -476,13 +476,7 @@ input[type="submit"] {
 }
 
 .pagination-item:hover {
-    /* border: 1px solid #676767;
-    transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center; */
     cursor: pointer;
-    /* padding: 8px; */
 }
 
 .current-selector {
@@ -1061,8 +1055,14 @@ video::-webkit-media-controls {
     cursor: pointer;
 }
 
+.catalog-block {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
 .wrapper-products {
-    width: 20%;
+    width: 27%;
     display: flex;
     flex-wrap: wrap;
     margin: 40px 0;
