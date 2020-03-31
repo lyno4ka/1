@@ -198,7 +198,6 @@ addClassToPagination();
 
 function changeSlide(event) {
     if(event.target.tagName === 'I') {
-        console.log(event)
         event.currentTarget.parentElement.offsetParent.children[0].children[indexMain].classList.remove('current-selector');
         indexMain = event.target.parentElement.id;
         createMainBannerGallerySlide();
