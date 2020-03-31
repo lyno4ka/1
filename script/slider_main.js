@@ -98,10 +98,8 @@ let sliderWrapper = document.querySelector('.slider-wrapper');
 let paginationList = document.querySelector('.pagination-list');
 const sliderArrowLeft = document.getElementById('slider-arrow-left');
 const sliderArrowRight = document.getElementById('slider-arrow-right');
-let li = paginationList.children;
 
 let indexSlide = 0;
-let index = 0;
 
 
 function createMainBannerGallerySlide() {
@@ -177,7 +175,7 @@ function createMainBannerGallerySlide() {
 createMainBannerGallerySlide();
 
 function createMainBannerGalleryPagination() {
-    for (var i = 0; i < mainBannerCarousel.length; i++) {
+    for (let i = 0; i < mainBannerCarousel.length; i++) {
         let li = document.createElement('li');
         li.classList.add('pagination-item');
         let i = document.createElement('i');
@@ -190,21 +188,21 @@ function createMainBannerGalleryPagination() {
 createMainBannerGalleryPagination();
 
 function addClassToPagination() {
-    for (let i = 0; i < li.length; i++) {
-        li[indexSlide].classList.add('current-selector');  
+    for (let i = 0; i <  paginationList.children.length; i++) {
+        paginationList.children[indexSlide].classList.add('current-selector');  
     }
 };
 addClassToPagination();
 
 sliderArrowLeft.addEventListener('click', function() {
-    li[indexSlide].classList.remove('current-selector');
+    paginationList.children[indexSlide].classList.remove('current-selector');
     indexSlide > 0 ? indexSlide -- : indexSlide = mainBannerCarousel.length - 1;
     createMainBannerGallerySlide();
     addClassToPagination();
 });
 
 sliderArrowRight.addEventListener('click', function() {
-    li[indexSlide].classList.remove('current-selector');
+    paginationList.children[indexSlide].classList.remove('current-selector');
     indexSlide < mainBannerCarousel.length - 1 ? indexSlide++ : indexSlide = 0;
     createMainBannerGallerySlide();
     addClassToPagination();
@@ -219,14 +217,49 @@ sliderArrowRight.addEventListener('click', function() {
 // });
 
 paginationList.addEventListener('click', function(event) {
-
-    li[indexSlide].classList.remove('current-selector');
-    console.log(this.children)
-    var nodes = Array.prototype.slice.call( document.querySelector('.pagination-list').children );
-    // const index = [...this.children].indexOf()
-    nodes.indexOf(this)
-
+    event.preventDefault();
+    // console.log(this.children)
+    let nodes = paginationList.children;
+    nodes[indexSlide].classList.remove('current-selector');
+    console.log(nodes);
     
-    console.log('nodes', nodes)
-    console.log('inde', index)
+    // nodes.forEach(function (item, i) {
+        
+    //     console.log('item[i]', item[i]);
+    //     let index = [...item].indexOf(item[i]);
+    //     indexSlide = index;
+    //     console.log('iindexSlide', indexSlide);
+    //     return item[i];
+    // });
+
+    for(let i = 0; i < nodes.length; i++) {
+        
+        // console.log("this[i]", this.children[i]);   
+        // console.log('nodes', nodes[i]);
+        let index = [...this.children].indexOf(this.children[i]);
+        indexSlide = index;
+        console.log('iindexSlide', indexSlide);
+       
+        
+    }
+   
+    createMainBannerGallerySlide();
+    addClassToPagination();        
 });
+
+
+// for(let i = 0; i < paginationList.length; i++) {
+
+//     paginationList.addEventListener('click', function() {
+
+//         paginationList[indexSlide].classList.remove('current-selector');
+
+//         let index = [...paginationList.children].indexOf(paginationList.children[i]);
+//         indexSlide = index;
+//         console.log('iindexSlide', indexSlide);
+
+//         addClassToPagination();
+//         createMainBannerGallerySlide();
+//     });
+        
+// }
