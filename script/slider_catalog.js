@@ -5,7 +5,7 @@ const catalogBannerCarousel = [
                 'productImgUrl':  './assets/image/classic-blue-tshirt.png', 
                 'altText': 'tshirt', 
                 'price': '250$',
-                'title': ''
+                'title': 'Lindsay Pearce Tshirt'
             },
             {
                 'productImgUrl':  './assets/image/brown-bag.png',  
@@ -27,7 +27,7 @@ const catalogBannerCarousel = [
                 'productImgUrl':  './assets/image/blue-dress-1.png', 
                 'altText': 'dress', 
                 'price': '1050$',
-                'title': ''
+                'title': 'Anna Young Summer Dress'
             },
             {
                 'productImgUrl':  './assets/image/black-bag.png',  
@@ -49,7 +49,7 @@ const catalogBannerCarousel = [
                 'productImgUrl':  './assets/image/blue-dress-2.png', 
                 'altText': 'dress', 
                 'price': '975$',
-                'title': ''
+                'title': 'Dress Night Party'
             },
             {
                 'productImgUrl':  './assets/image/black-bag-1.png',  
@@ -115,7 +115,8 @@ const catalogNavLeft = document.getElementById('catalog-nav-left');
 const catalogNavRight = document.getElementById('catalog-nav-right');
 const greyColor = document.querySelector('.grey-color');
 const vinousColor = document.querySelector('.vinous-color');
-const blueColor= document.querySelector('.blue-color');
+const blueColor = document.querySelector('.blue-color');
+const productsTitleBlock = document.querySelectorAll('.products-title-block');
 
 let indexCatalog = 0;
 
@@ -134,17 +135,7 @@ function createCatalogGallerySlide() {
                 </div>
                 <div class="products-info-block">
                     <div class="products-price-block"><span class="text-price">${catalogBannerCarousel[indexCatalog].slides[0].price}</span></div>
-                    <div class="products-icon-block">
-                        <div class="icon-heart">
-                            <div class="icon-block"><i class="fa fa-heart-o ic-heart" aria-hidden="true"></i></div>   
-                        </div>
-                        <div class="icon-shopping">
-                            <div class="icon-block"><i class="fa fa-shopping-basket ic-shopping" aria-hidden="true"></i></div>
-                        </div>
-                        <div class="icon-share">
-                            <div class="icon-block"><i class="fa fa-share-alt ic-share" aria-hidden="true"></i></div>
-                        </div>
-                    </div>
+                    <div class="products-title-block"><span class="prod-title-text">${catalogBannerCarousel[indexCatalog].slides[0].title}</span></div>
                 </div>
             </div>
             <div class="wrapper-products">

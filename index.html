@@ -93,10 +93,6 @@
         </div>
         <div class="wrapper-content">
             <div class="wrapper-video-player">
-                <div class="video-title-block">
-                    <h3 class="video-title">Get the best opportunities from shopping: fashion looks, personal stylist assistance and tax free refund in one!</h3>
-                    <img class="video-divider-white" src="./assets/image/divider-white.png" alt="divider-white">
-                </div>
                 <div id="video">
                     <video  src="./assets/video/video.mp4"
                         type='video/mp4'
@@ -104,8 +100,12 @@
                         controls="controls"
                         poster="./assets/image/video-poster.png">
                     </video>
-                    <div class="controls">
-
+                    <div id="controls">
+                        <a id="playBtn"><i class="fa fa-play play-ic" aria-hidden="true"></i></a>
+                        <span id="timer">00:00</span>
+                        <input type="range" id="video-track">
+                        <input type="range" step="0.1" min="0" max="1" value="1" id="volume">
+                        <a id="size-screen"><i class="fa fa-expand expand-ic" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -218,6 +218,17 @@
                     <div class="vinous-color"></div>
                     <div class="blue-color"></div>
                 </div>
+                <!-- <div class="products-icon-block">
+                    <div class="icon-heart">
+                        <div class="icon-block"><i class="fa fa-heart-o ic-heart" aria-hidden="true"></i></div>   
+                    </div>
+                    <div class="icon-shopping">
+                        <div class="icon-block"><i class="fa fa-shopping-basket ic-shopping" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="icon-share">
+                        <div class="icon-block"><i class="fa fa-share-alt ic-share" aria-hidden="true"></i></div>
+                    </div>
+                </div> -->
                 <div class="catalog-block">
                 </div>                 
             </div>
@@ -303,5 +314,6 @@
     <script src="script/slider_stylist.js"></script>
     <script src="script/slider_looks.js"></script>
     <script src="script/slider_catalog.js"></script>
+    <script src="script/video_player.js"></script>
 </body>
 </html>
