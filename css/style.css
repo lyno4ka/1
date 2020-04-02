@@ -712,6 +712,7 @@ input[type="submit"] {
     height: 100%;
     width: 100%;
     position: relative;
+    cursor: pointer;
 }
 
 video {
@@ -733,6 +734,10 @@ video::-webkit-media-controls {
     left: 0;
     padding: 10px 20px;
     width: 100%;
+}
+
+#playBtn {
+    cursor: pointer;
 }
 
 .play-ic,
