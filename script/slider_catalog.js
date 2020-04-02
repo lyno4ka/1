@@ -116,7 +116,6 @@ const catalogNavRight = document.getElementById('catalog-nav-right');
 const greyColor = document.querySelector('.grey-color');
 const vinousColor = document.querySelector('.vinous-color');
 const blueColor = document.querySelector('.blue-color');
-const productsTitleBlock = document.querySelectorAll('.products-title-block');
 
 let indexCatalog = 0;
 

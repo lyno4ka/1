@@ -9,7 +9,6 @@
 }
 
 * {
-    /* border: 1px solid; */
     box-sizing: border-box;
 }
 
@@ -748,7 +747,7 @@ video::-webkit-media-controls {
     color: #ffffff;
 }
 
-#video-track {
+.video-rewind {
     width: 60%;
 }
 
@@ -758,7 +757,6 @@ input[type=range] {
 
 input[type=range] {
     -webkit-appearance: none;
-    width: 15%;
     border-radius: 2px;
     height: 4px;
     border: 1px solid #bdc3c7;
@@ -1211,53 +1209,6 @@ input[type='range']::-webkit-slider-thumb {
     color: #545454;
 }
 
-/* .products-icon-block {
-    display: none;
-    max-width: 178px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid #f3f3f3;
-    padding: 15px;
-    margin: 5px 5px 5px 0;
-}
-
-.icon-heart,
-.icon-share,
-.icon-shopping {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #474747;
-    transform: rotate(45deg);
-    cursor: pointer;
-    transition: background 0.2s ease-out;
-}
-
-.icon-heart:hover,
-.icon-share:hover,
-.icon-shopping:hover {
-    background: #a7b3b3;
-}
-
-.icon-block {
-    transform: rotate(45deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ic-heart,
-.ic-share,
-.ic-shopping {
-    font-size: 12px;
-    transform: rotate(-90deg);
-    color: #ffffff;
-    text-align: center;
-} */
-
 .prod-title-text {
     font-family: 'PF Din Text Comp Pro';
     font-size: 14px;
@@ -1557,4 +1508,3 @@ footer {
         width: 70%;
     }
 }
-   
